@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <div class="ui container">
-        <div class="ui center secondary pointing menu">
+        <div id="menu" class="ui centered secondary pointing menu">
             <a class="active item" onclick="clearImage()">
                 neurowear.ai
             </a>
@@ -28,11 +27,10 @@
                 Headband Prototype
             </a>
         </div>
-    </div>
     <script>
         function displayImage(imageName) {
             var imageContainer = document.getElementById("imageContainer");
-            imageContainer.innerHTML = "<img src='images/" + imageName + "' alt='" + imageName + "'>";
+            imageContainer.innerHTML = "<img src='images/" + imageName + "' alt='" + imageName + "' width=75%>";
         }
 
         function clearImage() {
