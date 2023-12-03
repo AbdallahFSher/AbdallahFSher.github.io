@@ -3,9 +3,47 @@
 <head>
     <title>neurowear.ai</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.3/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="ui container">
+        <div class="ui center secondary pointing menu">
+            <a class="active item" onclick="clearImage()">
+                neurowear.ai
+            </a>
+            <a class="item" onclick="displayImage('AI Model Flow Chart.jpg')">
+                AI Model
+            </a>
+            <a class="item" onclick="displayImage('The_Prototypes_1.png')">
+                Smartband Prototype
+            </a>
+            <a class="item" onclick="displayImage('The_Prototypes_2.png')">
+                Mobile App Prototype
+            </a>
+            <a class="item" onclick="displayImage('The_Prototypes_3.png')">
+                Headband Prototype
+            </a>
+        </div>
+    </div>
+    <script>
+        function displayImage(imageName) {
+            var imageContainer = document.getElementById("imageContainer");
+            imageContainer.innerHTML = "<img src='images/" + imageName + "' alt='" + imageName + "'>";
+        }
 
+        function clearImage() {
+            var imageContainer = document.getElementById("imageContainer");
+            imageContainer.innerHTML = "";
+        }
+    </script>
+    <div id="imageContainer"></div>
+
+    <h1 id="topTitle">neurowear.ai</h1>
+    <h2 id="subTitle">AI powered personal seizure detection</h2>
+</body>
+    
 </body>
